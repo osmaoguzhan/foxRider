@@ -12,3 +12,9 @@ def moz_inputhistory(conn):
     cur.execute("SELECT input,use_count FROM moz_inputhistory ORDER BY use_count DESC")
     rows = cur.fetchall()
     cr.createTdForInput(rows)
+
+def moz_bookmarks(conn):
+    cur = conn.cursor()
+    cur.execute("SELECT title,dateAdded,lastModified FROM moz_bookmarks")
+    rows = cur.fetchall()
+    cr.createTdForBookmark(rows)

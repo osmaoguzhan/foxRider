@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   <style>
 .link {
   word-break: break-all;
@@ -35,12 +37,8 @@
 <body>
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top of the Page</button>
 <script>
-//Get the button
 var mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
-
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
@@ -49,20 +47,22 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
 </script>
-<div class="container">
-   <h2>Firefox Datas - FoxRider</h2>
-   <div class="col-md-4">
-  <a href="#urls">Visited URLs</a>
-  </div><div class="col-md-4">
-  <a href="#input">Input History</a>
+<div class="w3-sidebar w3-bar-block w3-grey" style="width:25%;right:0">
+  <h5 class="w3-bar-item">Titles</h5>
+  <a href="#urls" class="w3-bar-item w3-button">URL History and Visits</a>
+  <a href="#input" class="w3-bar-item w3-button">Input History</a>
+  <a href="#bookmark" class="w3-bar-item w3-button">Bookmarks</a>
+  <a href="#formhistory" class="w3-bar-item w3-button">Form History</a>
+  <img src="https://i.hizliresim.com/oyQzkb.png">
  </div>
- <table class="table" id="urls">
+<div class="col-md-9">
+   <h1>FoxRider REPORT</h1>
+ <table class="table table-striped table-bordered" id="urls">
     <thead>
       <tr>
         <th>URL</th>
