@@ -51,6 +51,7 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+document.write("Report Creation Date: "+Date());
 </script>
 <div class="w3-sidebar w3-bar-block w3-grey" style="width:25%;right:0">
   <h5 class="w3-bar-item">Titles</h5>
@@ -58,7 +59,7 @@ function topFunction() {
   <a href="#input" class="w3-bar-item w3-button">Input History</a>
   <a href="#bookmark" class="w3-bar-item w3-button">Bookmarks</a>
   <a href="#formhistory" class="w3-bar-item w3-button">Form History</a>
-  <img src="https://i.hizliresim.com/oyQzkb.png">
+  <img src="https://i.hizliresim.com/ryLj3z.png" width="500" height="200">
  </div>
 <div class="col-md-9">
    <h1>FoxRider REPORT</h1>

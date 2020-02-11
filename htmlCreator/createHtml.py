@@ -41,7 +41,6 @@ def createTdForInput(rows):
             f1.write("<table class=\"table table-striped table-bordered\" id=\"input\">"
                      "<thead><tr><th>Keyword</th><th>Keyword Rate</th></tr></thead><tbody>")
         for row in rows:
-            print(row)
             with open("report.html", "a") as f:
                     f.write("<tr><td class=\"link\">" + str(row[0]) + "</td><td>" + str(row[1]) + "</td></tr>")
     except:
@@ -59,7 +58,6 @@ def createTdForBookmark(rows):
             f1.write("<table class=\"table table-striped table-bordered\" id=\"bookmark\">"
                      "<thead><tr><th>Title</th><th>Date Added</th><th>Last Modified</th></tr></thead><tbody>")
         for row in rows:
-            print(row)
             with open("report.html", "a") as f:
                     f.write("<tr><td class=\"link\">" + str(row[0]) + "</td><td>" + str(datetime.datetime.fromtimestamp(row[1] / 1000000))[
                                 :str(datetime.datetime.fromtimestamp(row[1] / 1000000)).rfind(".")] + "</td><td>"+str(datetime.datetime.fromtimestamp(row[2] / 1000000))[
@@ -79,7 +77,6 @@ def createTdForForm(rows):
             f1.write("<table class=\"table table-striped table-bordered\" id=\"formhistory\">"
                      "<thead><tr><th>Field Name</th><th>Value</th><th>Times Used</th><th>First Used</th><th>Last Used</th></tr></thead><tbody>")
         for row in rows:
-            print(row)
             with open("report.html", "a") as f:
                     f.write("<tr><td class=\"link\">" + str(row[0]) + "</td><td class=\"link\">"+str(row[1])+"</td><td>"+str(row[2])+"</td><td>" + str(datetime.datetime.fromtimestamp(row[3] / 1000000))[
                                 :str(datetime.datetime.fromtimestamp(row[3] / 1000000)).rfind(".")] + "</td><td>"+str(datetime.datetime.fromtimestamp(row[4] / 1000000))[
@@ -96,7 +93,7 @@ def createTdForForm(rows):
 def closeHTML():
     try:
         with open("report.html", "a") as f1:
-            f1.write("</div></body></html>")
+            f1.write("</div><center>"+str(datetime.datetime.now())+"</center></body></html>")
     except:
         pass
     finally:
